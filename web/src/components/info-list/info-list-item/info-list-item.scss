@@ -1,0 +1,45 @@
+@import 'src/assets/styles/variables/index.scss';
+
+.land-info-list-item {
+  color: $jesus;
+  position: relative;
+  display: flex;
+  margin-bottom: 50px;
+  @media (max-width: 1100px) {
+    align-items: center;
+    padding-left: 50px;
+  }
+  &_left {
+    text-align: right;
+    justify-content: flex-start;
+    @media (max-width: 1100px) {
+      text-align: left;
+      justify-content: flex-start;
+    }
+  }
+  &_right {
+    text-align: left;
+    justify-content: flex-end;
+    @media (max-width: 1100px) {
+      justify-content: flex-start;
+    }
+  }
+  &__content {
+    display: inline-block;
+    width: 45%;
+    @media (max-width: 1100px) {
+      width: max-content;
+      margin: 0 20px;
+    }
+  }
+  &__headline {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    @media (max-width: 1100px) {
+      position: static;
+      transform: none;
+    }
+  }
+}

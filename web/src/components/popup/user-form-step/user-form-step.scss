@@ -1,0 +1,20 @@
+@import 'src/assets/styles/variables/index.scss';
+
+.land-user-form-step {
+  padding: $spacer-huge;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .typo-h3 {
+    margin-bottom: $spacer-big;
+  }
+  .btn-primary {
+    margin-top: $spacer-medium;
+  }
+  &__input {
+    font-size: 20px;
+    color: $jack;
+    max-width: 70%;
+    margin-bottom: $spacer-big;
+  }
+}

@@ -1,0 +1,112 @@
+@import 'src/assets/styles/variables/index.scss';
+
+.land-top-bar {
+  background-color: $jesus;
+  height: 90px;
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 3;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  @media (max-width: 1100px) {
+    height: 50px;
+  }
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__button {
+    display: none;
+    position: relative;
+    height: 15px;
+    width: 20px;
+    outline: none;
+    &:after,
+    &:before {
+      transition: .1s ease-in-out;
+      transform: rotate(0);
+      content: '';
+      display: inline-block;
+      position: absolute;
+      height: 5px;
+      background-color: $jacob;
+      width: 20px;
+      left: 0;
+    }
+    &:after {
+      top: 0;
+    }
+    &:before {
+      bottom: 0;
+    }
+    &_active {
+      &:after {
+        transition: .1s ease-in-out;
+        transform: rotate(-45deg);
+        top: 50%;
+      }
+      &:before {
+        transition: .1s ease-in-out;
+        transform: rotate(45deg);
+        top: 50%;
+      }
+    }
+    @media (max-width: 1100px) {
+      display: block;
+    }
+  }
+  &__logo {
+    background-image: url('../../assets/img/logo.png');
+    display: block;
+    height: 40px;
+    width: 100px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-right: $spacer-huge;
+  }
+  &__navigation {
+    @media (max-width: 1100px) {
+      transition: 1s ease-in-out all;
+      transform: translateX(-100%);
+      height: calc(100vh - 50px);
+      position: absolute;
+      left: 0;
+      top: 50px;
+      background-color: $jesus;
+      width: 100%;
+      &_active {
+        transition: 1s ease-in-out all;
+        transform: translateX(0);
+      }
+    }
+    &-list {
+      list-style-type: none;
+      display: flex;
+      padding: 0;
+      @media (max-width: 1100px) {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+    &-item {
+      color: $jack;
+      cursor: pointer;
+      &:hover {
+        opacity: .8;
+      }
+      &:not(:last-child) {
+        margin-right: $spacer-huge;
+        @media (max-width: 1100px) {
+          margin-right: 0;
+        }
+      }
+      @media (max-width: 1100px) {
+        margin-bottom: $spacer-huge;
+      }
+    }
+  }
+}

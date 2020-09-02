@@ -1,0 +1,46 @@
+@import 'src/assets/styles/variables/index.scss';
+
+.land-preview {
+  margin-top: 90px;
+  @media (max-width: 1100px) {
+    margin-top: 50px;
+  }
+  &__wrapper {
+    width: 100vw;
+    min-height: 800px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    &_bisness {
+      background-image: linear-gradient(to right, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('../../assets/img/preview.jpg');
+    }
+    &_hand-shacking {
+      background-image: linear-gradient(to right, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('../../assets/img/shaking-hands.jpg');
+    }
+    &_success {
+      background-image: linear-gradient(to right, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('../../assets/img/bisiness.jpg');
+    }
+    &_freedom {
+      background-image: linear-gradient(to right, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('../../assets/img/freedom.jpg');
+    }
+  }
+
+  .typo-h1 {
+    margin-bottom: $spacer-medium;
+    color: $jesus;
+    font-family: 'Playfair Display', serif;
+    @media (max-width: 1100px) {
+      font-size: 40px;
+    }
+  }
+  .typo-h2 {
+    margin-bottom: #{$spacer-huge * 3};
+    color: $jesus;
+    font-family: 'Playfair Display', serif;
+    @media (max-width: 1100px) {
+      font-size: 35px;
+    }
+  }
+  .container {
+    padding-top: 15%;
+  }
+}

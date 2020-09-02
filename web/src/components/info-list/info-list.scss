@@ -1,0 +1,12 @@
+@import 'src/assets/styles/variables/index.scss';
+
+.land-info-list {
+  list-style-type: none;
+  padding: 100px 0 0 0;
+  z-index: 5;
+  &__title {
+    color: $jesus;
+    margin-bottom: $spacer-huge;
+    padding: 0 $spacer-huge;
+  }
+}

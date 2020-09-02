@@ -1,0 +1,33 @@
+@import 'src/assets/styles/variables/index.scss';
+
+.land-user-form {
+  color: $jesus;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  &__title {
+    margin-bottom: $spacer-huge;
+  }
+  &__form {
+    max-width: 400px;
+    width: 100%;
+    margin: 0 auto;
+    box-sizing: border-box;
+    @media (max-width: 1100px) {
+      max-width: 100%;
+    }
+    &-field {
+      box-sizing: border-box;
+      &:not(:last-child) {
+        margin-bottom: $spacer-huge;
+      }
+    }
+    &-button {
+      box-sizing: border-box;
+      margin-top: 50px;
+      font-size: 30px;
+    }
+  }
+}

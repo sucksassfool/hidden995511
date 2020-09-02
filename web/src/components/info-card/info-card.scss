@@ -1,0 +1,38 @@
+@import 'src/assets/styles/variables/index.scss';
+
+.land-info-card {
+  color: $jesus;
+  padding-top: 100px;
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box;
+  &_right {
+    flex-direction: row-reverse;
+  }
+  @media (max-width: 1100px) {
+    flex-direction: column;
+  }
+  &__title {
+    @media (max-width: 1100px) {
+      margin-bottom: $spacer-big;
+    }
+  }
+  &__card {
+    background-color: $jason;
+    padding: $spacer-big;
+    width: 100%;
+    max-width: 700px;
+    box-sizing: border-box;
+    @media (max-width: 1100px) {
+      max-width: 100%;
+    }
+    &-wrapper {
+      border: 1px solid $neo;
+      padding: $spacer-big;
+      .typo-primary {
+        text-align: justify;
+        word-break: break-all;
+      }
+    }
+  }
+}

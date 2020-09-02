@@ -1,0 +1,19 @@
+@import 'src/assets/styles/variables/index.scss';
+
+.land-budge {
+  max-width: 250px;
+  &__image {
+    font-size: 50px;
+    color: $jesus;
+  }
+  &__title {
+    margin: $spacer-medium 0;
+  }
+  .typo-secondary {
+    color: $jesus;
+  }
+  @media (max-width: 1100px) {
+    max-width: 100%;
+    margin-bottom: #{$spacer-huge * 2};
+  }
+}
